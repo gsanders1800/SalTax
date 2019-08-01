@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="125dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/enter_your_salary"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/txtSalary"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="121dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/select_your_status"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup3"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup3" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="159dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="36dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSalary">
+
+        <RadioButton
+            android:id="@+id/RbtnMarried"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/married"
+            android:visibility="visible" />
+
+        <RadioButton
+            android:id="@+id/RbtnHeadOfHousehold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/head_of_household"
+            android:visibility="visible" />
+
+        <RadioButton
+            android:id="@+id/RbtnSingle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/single"
+            android:visibility="visible" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/txtSalary"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="156dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="135dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/enter_the_state_name"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintEnd_toStartOf="@+id/txtState"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/txtState"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:ignore="LabelFor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup3"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/lblWarning"
+        android:layout_width="67dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="168dp"
+        android:text="@string/warning"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/txtNetHourly"
+        android:layout_width="94dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/net_hourly"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalculate"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNetDaily"
+        android:layout_width="85dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/net_daily"
+        app:layout_constraintEnd_toStartOf="@+id/txtNetHourly"
+        app:layout_constraintTop_toBottomOf="@+id/lblWarning" />
+
+    <TextView
+        android:id="@+id/txtNetBiweekly"
+        android:layout_width="94dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="12dp"
+        android:text="@string/net_biweekly"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/txtNetDaily"
+        app:layout_constraintEnd_toStartOf="@+id/txtNetMonthly" />
+
+    <TextView
+        android:id="@+id/txtNetMonthly"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/net_monthly"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/txtNetHourly"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
